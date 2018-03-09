@@ -1,22 +1,31 @@
 import TodoHeader from './components/TodoHeader.vue';
 import TodoInput from './components/TodoInput.vue';
 import TodoItem from './components/TodoItem.vue';
+import axios from 'axios'
+
+
+var urlTasks= 'https://jsonplaceholder.typicode.com/todos';
 
 export default {
     name: 'app',
+    data(){
+        return{
+            tasks:[],
+            nextId:2
+        };
+    },
     components:{
         TodoHeader,
         TodoInput,
         TodoItem
     },
-    data(){
-        return{
-            tasks:[
-                {id: 0, text : "setting proyect"},
-                {id: 1, text : "make it work"}
-            ],
-            nextId:2
-        };
+    created: function(){
+        this.tasks = [];
+            axios.get(urlTasks).then(response => {
+            Object.keys(response.data).forEach(key => {
+            this.tasks.push(response.data[key]);
+            });
+        });
     },
     methods: {
         addItem(text){
@@ -27,5 +36,5 @@ export default {
             let tasks = this.tasks;
             this.tasks = tasks.filter((task) => task.id != id);
         }
-    }
+    },
 }
