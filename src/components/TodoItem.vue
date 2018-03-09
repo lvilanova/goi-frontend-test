@@ -1,7 +1,12 @@
 <template>
     <div>
         <button v-on:click="removeItem">delete</button>
-        {{task.title}}
+        <span v-on:click="toggleCompleted" v-bind:class="{complete: task.completed}">
+            {{task.title}}
+        </span> 
+
+      <button v-on:click="toggleCompleted" v-bind:class="{completed: task.completed}">asdasd</button>
+
     </div>
 </template>
 

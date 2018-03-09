@@ -12,7 +12,7 @@ export default {
     data(){
         return{
             tasks:[],
-            nextId:1
+            nextId:1,
         };
     },
     components:{
