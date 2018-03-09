@@ -1,8 +1,10 @@
 <template>
 <div>
-     <ul>
+     <!-- <ul>
         <li>{{task.title}}</li>
-    </ul>
+    </ul> -->
+        <button v-on:click="removeAll">delete all</button>
+
 </div>
    
 </template>

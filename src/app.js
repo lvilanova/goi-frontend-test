@@ -45,6 +45,9 @@ export default {
         removeItem(id){
             let tasks = this.tasks;
             this.tasks = tasks.filter((task) => task.id != id);
+        },
+        removeAll(){
+            this.tasks = [];
         }
     },
 }
