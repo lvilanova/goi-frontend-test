@@ -1,4 +1,4 @@
 <template>
-    <h1>Hey, iam the header</h1>
+    <h1>Todo App</h1>
 </template>
 
