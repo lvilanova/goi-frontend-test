@@ -3,7 +3,7 @@
      <!-- <ul>
         <li>{{task.title}}</li>
     </ul> -->
-        <button v-on:click="removeAll">delete all</button>
+        <button>delete all</button>
 
 </div>
    
