@@ -11,7 +11,7 @@ export default {
     data(){
         return{
             tasks:[],
-            nextId:2
+            nextId:1
         };
     },
     components:{
@@ -29,7 +29,7 @@ export default {
     },
     methods: {
         addItem(text){
-            this.tasks.push({id: this.nextId, text: text});
+            this.tasks.push({id: this.nextId, title: text});
             this.nextId ++;
         },
         removeItem(id){

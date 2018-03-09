@@ -1,7 +1,7 @@
 <template>
     <div>
         <button v-on:click="removeItem">delete</button>
-        {{task.text}}
+        {{task.title}}
     </div>
 </template>
 
