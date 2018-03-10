@@ -1,6 +1,7 @@
 import TodoHeader from './components/TodoHeader.vue'
 import TodoInput from './components/TodoInput.vue'
 import TodoItem from './components/TodoItem.vue'
+import TodoRemoveAll from './components/TodoRemoveAll.vue';
 import TodoFilters from './components/TodoFilters.vue';
 import axios from 'axios'
 
@@ -20,6 +21,7 @@ export default {
         TodoHeader,
         TodoInput,
         TodoItem,
+        TodoRemoveAll,
         TodoFilters
     },
     created: function(){
@@ -37,7 +39,7 @@ export default {
         completedTasks() {
           return this.tasks.filter(task => task.completed)
           },
-        todosFiltrados() {
+        todosFiltered() {
             return this.tasks.filter(task => this.noFilter || !task.completed)
          }
     },
@@ -53,8 +55,8 @@ export default {
         removeAll(){
             this.tasks = [];
         },
-        filtrar() { 
+        filter() { 
             this.noFilter = !this.noFilter;
-          },
+        },
     },
 }

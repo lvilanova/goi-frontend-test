@@ -1,10 +1,6 @@
 <template>
 <div>
-     <!-- <ul>
-        <li>{{task.title}}</li>
-    </ul> -->
-        <button v-on:click="removeAll">delete all</button>
-        <button class="completados" @click="filtrar">{{noFilter ? 'Ver no completados' : 'Ver todos' }}</button>
+        <button class="" v-on:click="filter">{{noFilter ? 'Ver no completados' : 'Ver todos' }}</button>
 </div>
    
 </template>
