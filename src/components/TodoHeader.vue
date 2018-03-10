@@ -2,4 +2,4 @@
     <h1>Todo App</h1>
 </template>
 
-<style src="./TodoHeader.scss"></style>
+<style lang="scss" src="./TodoHeader.scss"></style>

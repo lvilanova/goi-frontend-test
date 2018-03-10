@@ -6,4 +6,4 @@
 </template>
 
 <script src="./TodoFilters.js"></script>
-<style src="./TodoFilters.scss"></style>
+<style lang="scss" src="./TodoFilters.scss"></style>

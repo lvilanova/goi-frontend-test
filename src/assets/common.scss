@@ -1,0 +1,41 @@
+
+// Colors
+$c-primary:   #D52B1E;
+$c-secondary: #263746; 
+$blue: #003970;
+$blue-light:#105AA3;
+$blue-lighter:#4BA7EE;
+$blue-hightlight:#326C96;
+$green:#4CAF50;
+$grey:#616469;
+$grey-light:#f2f2f2;
+$white:#fff;
+$red:#E82E34;
+
+// Typography
+$f-sans:  'flamabasic',      sans-serif;
+$f-basic: 'flamabasic',      sans-serif;
+$f-semib: 'flamasemibold',   sans-serif;
+$f-light: 'flamalight',      sans-serif;
+$f-ultra: 'flamaultralight', sans-serif;
+
+//Fonts
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700); 
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+
+$roboto-slab: 'Roboto Slab', sans-serif;   
+$roboto: 'Roboto', sans-serif; 
+
+
+// MediaQueries Breakpoints
+// See https://github.com/carloscabo/mqbe and ./utils for both js and sass media queries helpers
+$mobile: 767px;
+$tablet: 1023px;
+$small-desktop:  1024px;
+$medium-desktop: 1264px; 
+
+//spacing
+$sm-spacing:4px;
+$lg-spacing:16px;
+$bg-spacing:32px;
