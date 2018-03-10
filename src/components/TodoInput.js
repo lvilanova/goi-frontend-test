@@ -7,8 +7,10 @@ export default{
     },
     methods:{
         addItem(){
-            this.$emit('todo:add', this.text);
-            this.text='';
+            if(this.text.length != 0){
+                this.$emit('todo:add', this.text);
+                this.text='';
+            }           
         }
     }
 }
