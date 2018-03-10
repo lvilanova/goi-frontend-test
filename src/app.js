@@ -13,6 +13,7 @@ export default {
         return{
             tasks:[],
             nextId:1,
+            noFilter: true
         };
     },
     components:{
@@ -34,8 +35,11 @@ export default {
           return this.tasks.filter(task => !task.completed)
         },
         completedTasks() {
-            return this.tasks.filter(task => task.completed)
+          return this.tasks.filter(task => task.completed)
           },
+        todosFiltrados() {
+            return this.tasks.filter(task => this.noFilter || !task.completed)
+         }
     },
     methods: {
         addItem(text){
@@ -48,6 +52,9 @@ export default {
         },
         removeAll(){
             this.tasks = [];
-        }
+        },
+        filtrar() { 
+            this.noFilter = !this.noFilter;
+          },
     },
 }

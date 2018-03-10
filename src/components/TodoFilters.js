@@ -4,7 +4,7 @@ export default{
     methods:{
         removeAll(){
             this.$emit('todo:removeAll');
-        }
+        },
     }
    
 
