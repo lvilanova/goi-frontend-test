@@ -3,4 +3,4 @@
 </template>
 
 <script src="./TodoRemoveAll.js"></script>
-<style src="./TodoRemoveAll.css"></style>
+<style src="./TodoRemoveAll.scss"></style>

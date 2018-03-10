@@ -6,4 +6,4 @@
 </template>
 
 <script src="./TodoInput.js"></script>
-<style src="./TodoInput.css"></style>
+<style src="./TodoInput.scss"></style>

@@ -8,4 +8,4 @@
 </template>
 
 <script src="./TodoItem.js"></script>
-<style src="./TodoItem.css"></style>
+<style src="./TodoItem.scss"></style>
