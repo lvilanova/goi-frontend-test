@@ -1,5 +1,5 @@
 <template>
-    <h1>Todo App</h1>
+    <h1 class="title">Todo App</h1>
 </template>
 
 <script src="./TodoHeader.js"></script>

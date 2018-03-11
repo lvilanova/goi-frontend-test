@@ -48,6 +48,8 @@ body {
             padding: $sm-spacing 0;
             .text {
                 padding-right: $lg-spacing;
+                color:$grey;
+                font-size:16px;
             }
             .btn-removeall {
                 float: right;

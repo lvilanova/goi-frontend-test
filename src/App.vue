@@ -7,7 +7,7 @@
       <span class="date">{{moment(date).format('dddd, DD')}}th</span>
       <todo-input v-on:todo:add="addItem"></todo-input>
       <div class="todo-filters">
-        <span class="text">See:</span>
+        <span class="text">Filter:</span>
         <button class="btn-filter" v-on:click="filter">{{noFilter ? 'Uncompleted tasks' : 'All tasks' }}</button>
         <todo-removeAll v-on:todo:removeAll="removeAll()"></todo-removeAll>  
       </div>
