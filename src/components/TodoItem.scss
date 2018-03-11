@@ -4,6 +4,12 @@
     text-decoration: line-through;
     font-weight:600;
 }
+.checkicon{
+  &:before{
+    content:url('../assets/check-icon.png');
+    position:absolute;
+  }
+}
 
 .todoWrapper {
     position:relative;
@@ -18,16 +24,15 @@
       margin-bottom: 10px;
       outline: none;
       box-shadow: none;
-      border-width: 2px;
       border-radius: 3px;
       border-style: solid;
-      padding: 8px;
+      padding: 4px;
       color: $red-danger;
       border-color: $red-danger;
       background-color: transparent;
       cursor:pointer;
     }
-    span{
+    .task{
       position: relative;
       display:inline-block;
       font-size:18px;
@@ -36,6 +41,7 @@
       top: 4px;
       color:$grey;
       line-height: 21px;
+      margin-left:$bg-spacing;
     }
   
   }
