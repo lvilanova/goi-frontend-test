@@ -1,7 +1,6 @@
 @import './assets/common.scss';
-
-body{
-    font-family:$roboto;
+body {
+    font-family: $roboto;
     padding: 40px 20px;
     background: $blue-lighter;
 }
@@ -12,7 +11,7 @@ body{
     width: 100%;
     min-width: 280px;
     max-width: 100%;
-    font-size:14px;
+    font-size: 14px;
     background-color: #fefeff;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -22,11 +21,36 @@ body{
     -moz-box-shadow: 0 15px 150px rgba(0, 0, 0, 0.15);
     box-shadow: 0 15px 150px rgba(0, 0, 0, 0.15);
     .todo-content {
-        padding:20px;
-        .todo-filters{
-            padding:$sm-spacing 0; 
-            .btn-removeall{
-                float:right;
+        position: relative;
+        padding: 20px;
+        .date {
+            display: inline-block;
+            padding-bottom: $bg-spacing;
+            color: $grey;
+            font-size: 20px;
+            opacity: 0.6;
+        }
+        .counter {
+            position: absolute;
+            color: $grey;
+            font-size: 14px;
+            opacity: 0.6;
+            right: 16px;
+            &.unfinished-task {
+                top: 60px;
+            }
+            &.finished-task {
+                right: 16px;
+                top: 90px;
+            }
+        }
+        .todo-filters {
+            padding: $sm-spacing 0;
+            .text {
+                padding-right: $lg-spacing;
+            }
+            .btn-removeall {
+                float: right;
             }
         }
     }
@@ -50,7 +74,7 @@ body{
 }
 
 @media only screen and (min-width: $mobile) {
-    .todo-app{
-        max-width:50%;
+    .todo-app {
+        max-width: 50%;
     }
 }

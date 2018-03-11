@@ -5,6 +5,7 @@ import TodoRemoveAll from './components/TodoRemoveAll.vue';
 import axios from 'axios'
 
 
+var moment = require('moment');
 var urlTasks= 'https://jsonplaceholder.typicode.com/todos';
 
 export default {
@@ -13,7 +14,11 @@ export default {
         return{
             tasks:[],
             nextId:1,
-            noFilter: true
+            noFilter: true,
+            moment:moment,
+            task_counter1:"Unfinished tasks",
+            task_counter2:"finished tasks",
+
         };
     },
     components:{
@@ -39,7 +44,7 @@ export default {
           },
         todosFiltered() {
             return this.tasks.filter(task => this.noFilter || !task.completed)
-         }
+         },
     },
     methods: {
         addItem(text){
