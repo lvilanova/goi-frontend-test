@@ -45,7 +45,8 @@ body {
             }
         }
         .todo-filters {
-            padding: $sm-spacing 0;
+            padding-top: $sm-spacing;
+            padding-bottom:$bg-spacing;
             .text {
                 padding-right: $lg-spacing;
                 color:$grey;

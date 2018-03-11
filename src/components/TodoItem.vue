@@ -1,6 +1,6 @@
 <template>
     <div class="todoWrapper">
-        <span v-on:click="toggleCompleted" v-bind:class="{completed: task.completed}">
+        <span v-on:click="toggleCompleted" v-bind:class="[{completed: task.completed}, 'icons']">
             {{task.title}}
         </span> 
         <button class="removeTodo" v-on:click="removeItem">delete</button>
