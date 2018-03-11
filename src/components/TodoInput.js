@@ -3,6 +3,7 @@ export default{
     data() {
      return {
          text : "",
+         placeholder:"type your task"
      };
     },
     methods:{

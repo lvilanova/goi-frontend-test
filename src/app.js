@@ -2,10 +2,10 @@ import TodoHeader from './components/TodoHeader.vue'
 import TodoInput from './components/TodoInput.vue'
 import TodoItem from './components/TodoItem.vue'
 import TodoRemoveAll from './components/TodoRemoveAll.vue';
-import axios from 'axios'
+import axios from 'axios' //request to endpoint
+import moment from 'moment' //library to display current date
 
 
-var moment = require('moment');
 var urlTasks= 'https://jsonplaceholder.typicode.com/todos';
 
 export default {
@@ -17,7 +17,7 @@ export default {
             noFilter: true,
             moment:moment,
             task_counter1:"Unfinished tasks",
-            task_counter2:"finished tasks",
+            task_counter2:"Finished tasks",
 
         };
     },
@@ -27,6 +27,7 @@ export default {
         TodoItem,
         TodoRemoveAll,
     },
+    //call to the endpoint and bring all the info
     created: function(){
         this.tasks = [];
             axios.get(urlTasks).then(response => {
@@ -35,6 +36,7 @@ export default {
             });
         });
     },
+    //manage how many incompleted and completed tasks for the counters
     computed: {
         incompletedTasks() {
           return this.tasks.filter(task => !task.completed)
@@ -42,11 +44,13 @@ export default {
         completedTasks() {
           return this.tasks.filter(task => task.completed)
           },
+          //we're going to use this for change the iteration of uncompleted or completed tasks
         todosFiltered() {
             return this.tasks.filter(task => this.noFilter || !task.completed)
          },
     },
     methods: {
+        //unshift for adding the new task at first position
         addItem(text){
             this.tasks.unshift({id: this.nextId, title: text, completed: false});
             this.nextId ++;

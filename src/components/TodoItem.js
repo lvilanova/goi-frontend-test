@@ -8,6 +8,7 @@ export default{
         removeItem(){
             this.$emit('todo:remove', this.task.id);
         },
+        //boolean var for manage toggle class
         toggleCompleted(){
             if( this.task.completed == true ){
                 this.task.completed = false

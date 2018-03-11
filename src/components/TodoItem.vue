@@ -3,7 +3,6 @@
         <span v-on:click="toggleCompleted" v-bind:class="{checkicon: task.completed}"></span>
         <span v-on:click="toggleCompleted" v-bind:class="[{completed: task.completed},'task']">
             {{task.title}}
-
         </span> 
         <button class="removeTodo" v-on:click="removeItem">X</button>
 

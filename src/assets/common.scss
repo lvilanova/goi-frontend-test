@@ -1,18 +1,13 @@
-
 // Colors
 $blue: #003970;
 $blue-light:#105AA3;
 $blue-lighter:#4BA7EE;
 $blue-hightlight:#326C96;
-$green:#4CAF50;
 $grey:#82829c;;
 $grey-light:#e6e6e6;
 $white:#fff;
 $red:#E82E34;
 $red-danger:#fb6f70;
-
-// Typography
-
 
 //Fonts
 
@@ -24,7 +19,6 @@ $roboto: 'Roboto', sans-serif;
 
 
 // MediaQueries Breakpoints
-// See https://github.com/carloscabo/mqbe and ./utils for both js and sass media queries helpers
 $mobile: 767px;
 $tablet: 1023px;
 $small-desktop:  1024px;
@@ -34,3 +28,8 @@ $medium-desktop: 1264px;
 $sm-spacing:4px;
 $lg-spacing:16px;
 $bg-spacing:32px;
+
+
+::-webkit-input-placeholder {
+    opacity: 0.4 !important;
+}
