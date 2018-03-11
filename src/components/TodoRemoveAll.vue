@@ -1,5 +1,5 @@
 <template>
-    <button v-on:click="removeAll">delete all</button>
+    <button class="btn-removeall"v-on:click="removeAll">delete all</button>
 </template>
 
 <script src="./TodoRemoveAll.js"></script>

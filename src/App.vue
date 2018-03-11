@@ -4,10 +4,11 @@
       <TodoHeader></TodoHeader>
       <todo-input v-on:todo:add="addItem"></todo-input>
       <todo-removeAll v-on:todo:removeAll="removeAll()"></todo-removeAll>  
-      <todo-filters v-on:todo:filter="filter()"></todo-filters>
+       <button class="" v-on:click="filter">{{noFilter ? 'Ver no completados' : 'Ver todos' }}</button>
+
+      <!-- <todo-filters v-on:todo:filter="filter()"></todo-filters> -->
       <todo-item v-for = "(task, i) in todosFiltered" v-bind:task = "task" v-on:todo:remove="removeItem" :key="i"></todo-item>
       
-      <!-- <button class="" @click="filter">{{noFilter ? 'Ver no completados' : 'Ver todos' }}</button> -->
 
     </div>  
   </div>
